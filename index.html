@@ -1,23 +1,847 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "QM6 유지비 분석 및 견적 서비스",
+      "description": "르노코리아 QM6 차량의 연비, 보험료, 수리비 등을 종합적으로 분석하여 유지비용을 계산하고 절약 방법을 제시하는 정보 및 비교 견적 서비스.",
+      "brand": {
+        "@type": "Brand",
+        "name": "르노코리아자동차"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "2500"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "KRW",
+        "price": "문의요망",
+        "url": "https://example.com/qm6-maintenance"
+      }
+    }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "QM6 유지비는 다른 국산 SUV와 비교했을 때 어떤가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "QM6는 LPG 모델인 LPe가 있어 유류비 절감 효과가 뛰어납니다. 가솔린 모델은 경쟁차종과 비슷한 수준이지만, LPG 모델은 연간 주행 거리에 따라 큰 폭의 유지비 절약이 가능합니다. 특히 르노코리아는 부품 단가가 저렴한 편으로 알려져 있어 수리비용 측면에서도 장점이 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "QM6 가솔린 모델과 LPe 모델 중 유지비가 더 저렴한 것은 무엇인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "일반적으로 LPe 모델이 가솔린 모델보다 유류비가 저렴합니다. LPG 가격이 가솔린보다 낮기 때문에, 연간 주행 거리가 15,000km 이상이라면 LPe 모델의 유지비가 훨씬 절약됩니다. 단, LPe 모델은 신차 가격이 가솔린 모델보다 약간 높고, 주유소 인프라를 고려해야 합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "QM6 보험료를 절약할 수 있는 방법이 있나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "자동차 보험은 가입자의 운전 경력, 나이, 사고 이력 등 다양한 요소에 따라 보험료가 달라집니다. 여러 보험사의 견적을 비교하는 것이 가장 중요하며, 특약 할인(마일리지 할인, 블랙박스 할인, 안전장치 할인 등)을 최대한 활용하면 큰 폭의 절약이 가능합니다. 신규 가입 혜택이나 다이렉트 보험을 이용하는 것도 추천합니다."
+          }
+        }
+      ]
+    }
+  </script>
+
+  <!-- ItemList Schema -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "QM6 유지비 관련 정보",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Article",
+            "url": "#maintenance-analysis",
+            "name": "QM6 유지비 상세 분석: 2026년 최신 데이터 기반"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Article",
+            "url": "#fuel-cost",
+            "name": "QM6 연비 비교: 가솔린 vs LPe 모델 유류비 차이점 분석"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Article",
+            "url": "#insurance-guide",
+            "name": "QM6 보험료 절약 가이드: 다이렉트 비교와 할인 혜택"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Article",
+            "url": "#repair-guide",
+            "name": "QM6 수리비 및 소모품 교체 주기: 저렴한 유지보수 방법"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "Article",
+            "url": "#competitor-comparison",
+            "name": "QM6 vs 경쟁차종 유지비 장단점 비교"
+          }
+        }
+      ]
+    }
+  </script>
+
+  <!-- Custom CSS for Aesthetics and SEO Hierarchy -->
+  <style>
+    :root {
+      --primary-color: #004a80; /* Deep Blue, represents reliability */
+      --secondary-color: #2a7a9a; /* Sky Blue, represents transparency */
+      --accent-color: #ffc107; /* Yellow, represents value/savings */
+      --bg-light: #f4f7f9; /* Light gray-blue background */
+      --bg-white: #ffffff;
+      --text-color: #333333;
+      --heading-color: #1a1a1a;
+      --shadow-color: rgba(0, 0, 0, 0.08);
+      --border-radius: 10px;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-light);
+      color: var(--text-color);
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background-color: var(--primary-color);
+      color: var(--bg-white);
+      text-align: center;
+      padding: 30px 20px;
+      border-bottom: 5px solid var(--accent-color);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      font-weight: 800;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.1em;
+      font-weight: 300;
+    }
+
+    nav {
+      background-color: var(--secondary-color);
+      padding: 10px 0;
+      box-shadow: 0 2px 5px var(--shadow-color);
+    }
+
+    nav .container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--bg-white);
+      text-decoration: none;
+      padding: 10px 20px;
+      font-weight: 500;
+      font-size: 0.95em;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #003a64;
+    }
+
+    main {
+      padding: 40px 0;
+    }
+
+    section {
+      background-color: var(--bg-white);
+      padding: 40px;
+      border-radius: var(--border-radius);
+      margin-bottom: 30px;
+      box-shadow: 0 4px 12px var(--shadow-color);
+    }
+
+    h2 {
+      color: var(--primary-color);
+      font-size: 2em;
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 10px;
+    }
+
+    h3 {
+      color: var(--secondary-color);
+      font-size: 1.5em;
+      margin-top: 25px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+
+    /* Form Styles */
+    form {
+      background-color: var(--bg-light);
+      padding: 30px;
+      border-radius: var(--border-radius);
+      box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 500;
+      color: var(--text-color);
+    }
+
+    form input[type="text"],
+    form input[type="number"],
+    form select {
+      width: calc(100% - 20px);
+      padding: 12px;
+      margin-top: 5px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      box-sizing: border-box;
+      font-size: 1em;
+    }
+
+    form button {
+      background-color: var(--accent-color);
+      color: var(--primary-color);
+      border: none;
+      padding: 15px 25px;
+      font-size: 1.1em;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 20px;
+      width: 100%;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    form button:hover {
+      background-color: #e6b000;
+      transform: translateY(-2px);
+    }
+
+    /* Table Styles */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table th, table td {
+      border: 1px solid #dddddd;
+      padding: 12px;
+      text-align: center;
+    }
+
+    table th {
+      background-color: #f2f2f2;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+
+    /* List Styles */
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    /* Image Styles */
+    .content-image {
+      width: 100%;
+      height: auto;
+      border-radius: var(--border-radius);
+      margin-bottom: 20px;
+    }
+
+    /* FAQ Styles */
+    .faq-item {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      background-color: #f9f9f9;
+      padding: 18px 20px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      color: var(--heading-color);
+      font-size: 1.1em;
+    }
+
+    .faq-answer {
+      padding: 0 20px;
+      font-size: 0.95em;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+      background-color: var(--bg-white);
+    }
+
+    .faq-item.active .faq-answer {
+      padding: 18px 20px;
+      max-height: 500px; /* Adjust based on content length */
+    }
+
+    .faq-toggle {
+      font-size: 1.5em;
+      font-weight: 700;
+      transition: transform 0.3s;
+    }
+
+    .faq-item.active .faq-toggle {
+      transform: rotate(45deg);
+    }
+
+    /* Related Keywords Section */
+    .keyword-list {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      justify-content: center;
+    }
+
+    .keyword-list li {
+      background-color: var(--secondary-color);
+      color: var(--bg-white);
+      padding: 8px 15px;
+      margin: 5px;
+      border-radius: 20px;
+      font-size: 0.9em;
+      transition: background-color 0.3s;
+    }
+
+    .keyword-list li:hover {
+      background-color: var(--primary-color);
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: var(--primary-color);
+      color: var(--bg-white);
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9em;
+      margin-top: 30px;
+    }
+
+    footer a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      header h1 { font-size: 2em; }
+      nav a { padding: 10px 15px; font-size: 0.9em; }
+      section { padding: 25px; }
+      h2 { font-size: 1.8em; }
+      h3 { font-size: 1.3em; }
+    }
+  </style>
+
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>QM6 유지비 완벽 분석: 2026년 최신 보험료, 연비, 수리비용 상세 비교</h1>
+      <p>르노코리아 QM6 오너들을 위한 필수 가이드. 가솔린 vs LPe 모델 유지보수 비용 장단점 분석 및 절약 전략.</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="container">
+      <a href="#maintenance-analysis">유지비 분석</a>
+      <a href="#fuel-cost">연비 비교</a>
+      <a href="#insurance-guide">보험료 절약</a>
+      <a href="#repair-guide">수리 및 소모품</a>
+      <a href="#competitor-comparison">경쟁차종 비교</a>
+      <a href="#faq">FAQ</a>
+      <a href="#calculator">유지비 계산기</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="container" id="maintenance-analysis">
+      <h2>QM6 유지비 2026년 상세 분석: 핵심 요소와 절약 방안</h2>
+      <p>QM6는 르노코리아자동차의 대표적인 중형 SUV로, 뛰어난 디자인과 가성비로 꾸준한 인기를 얻고 있습니다. 차량 구매를 고려하는 운전자들이 가장 중요하게 생각하는 요소 중 하나는 바로 QM6 유지비입니다. 2026년을 기준으로 QM6 유지비를 분석해보면, 신차 가격뿐만 아니라 연간 발생하는 보험료, 유류비, 자동차세, 수리비용 등을 종합적으로 고려해야 합니다. 특히 QM6는 가솔린 모델과 LPe(LPG) 모델 두 가지 선택지가 있어, 운전 습관과 연간 주행 거리에 따라 유지비 차이가 크게 발생합니다. 이 가이드에서는 QM6 유지비의 모든 측면을 깊이 있게 다루어, 현명하게 차량을 운용할 수 있는 최적의 방법을 제시합니다.</p>
+      <img src="https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="QM6 차량 이미지" class="content-image" loading="lazy">
+
+      <h3>1. QM6 유지비의 구성 요소 및 중요성</h3>
+      <p>자동차 유지비는 단순히 연료비만으로 결정되지 않습니다. QM6 유지비를 정확히 파악하려면 다음 네 가지 핵심 요소를 분석해야 합니다.</p>
+      <ol>
+        <li><strong>보험료:</strong> 자동차 보험은 필수 의무 가입 항목이며, 운전자 나이, 경력, 사고 이력, 차량 가액, 연식 등 복합적인 요인으로 산정됩니다. QM6 보험료는 다이렉트 보험 비교를 통해 크게 절약할 수 있습니다.</li>
+        <li><strong>연비 및 유류비:</strong> 주행 거리에 따라 유류비가 유지비의 가장 큰 비중을 차지할 수 있습니다. QM6의 가솔린(2.0 GDe)과 LPe(2.0 LPe) 모델의 연비 차이점을 정확히 이해하는 것이 중요합니다.</li>
+        <li><strong>자동차세:</strong> 차량 배기량(CC)에 따라 매년 부과되는 세금입니다. QM6는 2.0L 엔진을 사용하므로 동일한 배기량 기준의 세금이 적용됩니다.</li>
+        <li><strong>수리비 및 소모품 교체 비용:</strong> 엔진 오일, 타이어, 브레이크 패드 등 소모품 교체와 정기 점검 비용, 그리고 예기치 않은 사고나 고장 시 발생하는 수리비용입니다.</li>
+      </ol>
+
+      <h3>2. QM6 연비 분석: 가솔린 vs LPe 모델 비교</h3>
+      <p>QM6의 가장 큰 특징은 가솔린과 LPe(LPG) 모델을 모두 제공한다는 점입니다. 이는 유지비 절약 측면에서 매우 중요한 선택지이며, 구매 시점부터 신중한 비교가 필요합니다. 2026년 기준 유가와 LPG 가격 동향을 바탕으로 두 모델의 유지비용을 비교해보겠습니다.</p>
+      <h4>가솔린 모델 (QM6 2.0 GDe)</h4>
+      <p>가솔린 모델은 일반적으로LPG 모델에 비해 연비가 조금 더 좋지만, 연료 가격 자체가 높습니다. 복합 연비는 약 11~12km/L 수준으로 알려져 있으며, 주행 환경(도심 vs 고속도로)에 따라 편차가 큽니다. 가솔린 모델은 초기 차량 가격이 LPe 모델보다 저렴한 편이며, 주행 환경에 대한 부담이 적다는 장점이 있습니다. 다만, 유가 변동에 민감하며, 연간 주행 거리가 많은 운전자에게는 LPe 대비 유지비가 높아질 수 있습니다. 특히 르노코리아 QM6의 가솔린 모델은 조용하고 부드러운 승차감을 제공하며, 정숙성 면에서 장점을 가집니다.</p>
+
+      <h4>LPe 모델 (QM6 2.0 LPe)</h4>
+      <p>LPe 모델은 QM6의 인기 비결 중 하나입니다. LPG 연료의 가격은 가솔린 대비 50~60% 수준으로 매우 저렴합니다. 물론 LPe 모델의 복합 연비는 가솔린 모델보다 다소 낮지만(약 8~9km/L), 저렴한 연료 가격 덕분에 실질적인 유류비 절감 효과는 월등합니다. 특히 연간 15,000km 이상 주행하는 운전자라면 LPe 모델이 가솔린 모델 대비 연간 수십만 원에서 100만 원 이상의 유지비 절감 효과를 볼 수 있습니다. 초기 차량 가격이 조금 더 높지만, 높은 주행 거리에서는 금방 상쇄됩니다. 단, LPe 모델은 트렁크에 LPG 봄베가 위치하여 적재 공간이 다소 줄어들 수 있다는 단점이 있습니다.</p>
+
+      <!-- 그래프 삽입: 연간 주행 거리에 따른 유류비 비교 (가솔린 vs LPe) -->
+      <h3 style="text-align:center;">QM6 연간 주행 거리에 따른 유류비 비교 (예시)</h3>
+      <p style="text-align:center; font-size:0.9em; color:#666;">*2026년 예상 평균 유가 및 LPG 가격 기준 (주행 거리 15,000km/년 기준)</p>
+      <table style="margin:20px auto; max-width:600px;">
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>QM6 가솔린 (11km/L)</th>
+            <th>QM6 LPe (8.5km/L)</th>
+            <th>유류비 절감액 (LPe 선택 시)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>연간 주행 거리 (km)</td>
+            <td colspan="2">15,000km</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>연료 가격 (평균)</td>
+            <td>1,650원/L (가솔린)</td>
+            <td>950원/L (LPG)</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>필요 연료량 (L)</td>
+            <td>1,364L</td>
+            <td>1,765L</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>연간 유류비 (예상)</td>
+            <td>2,249,400원</td>
+            <td>1,676,750원</td>
+            <td>약 572,650원</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>이러한 수치를 보면, 주행 거리가 많은 운전자에게 QM6 LPe 모델이 얼마나 저렴한지 명확하게 알 수 있습니다. 특히 영업용 차량이나 장거리 출퇴근이 잦은 운전자에게는 LPe 모델이 경제적인 선택지입니다.</p>
+    </section>
+
+    <section class="container" id="insurance-guide">
+      <h2>QM6 보험료 절약 가이드: 다이렉트 비교와 할인 혜택</h2>
+      <p>QM6 유지비 중 변동성이 가장 큰 부분 중 하나가 자동차 보험료입니다. QM6 보험료는 운전자마다 천차만별이며, 어떻게 가입하느냐에 따라 연간 수십만 원의 차이가 발생할 수 있습니다. 2026년 최신 보험 가입 트렌드를 분석하여 QM6 보험료를 절약하는 실질적인 방법을 제시합니다. 신규 가입 혜택, 다이렉트 보험, 그리고 다양한 할인 특약을 활용하여 최저가 견적을 받는 것이 목표입니다.</p>
+
+      <h3>1. 다이렉트 보험 비교의 중요성: 최저가 찾는 비법</h3>
+      <p>QM6 보험료를 비교할 때는 반드시 여러 보험사의 견적을 확인해야 합니다. 보험사마다 손해율과 정책이 다르므로, 같은 조건이라도 보험사별로 견적 금액 차이가 큽니다. 특히 다이렉트 보험(인터넷으로 직접 가입)을 이용하면 설계사 수수료가 빠져나가기 때문에 일반 오프라인 대비 15~20%가량 저렴하게 가입할 수 있습니다. 르노코리아 QM6 오너라면 A 보험사, B 보험사, C 보험사 등 최소 3곳 이상의 다이렉트 보험료를 비교해야 최저가를 찾을 수 있습니다.</p>
+
+      <h3>2. QM6 보험료 할인 특약 총정리: 연간 수십만 원 절약</h3>
+      <p>QM6 보험료를 절감하는 가장 효과적인 방법은 할인 특약을 최대한 활용하는 것입니다. 다음은 QM6 운전자들이 적용할 수 있는 주요 할인 특약입니다.</p>
+      <ul>
+        <li><strong>마일리지 특약 (주행거리 할인):</strong> 연간 주행 거리가 짧을수록 보험료를 할인해주는 특약입니다. QM6 LPe 모델을 선택하는 운전자 중 주행 거리가 짧은 운전자는 이 혜택을 반드시 활용해야 합니다. 연간 1만 km 이하 주행 시 10~30% 할인 적용이 가능합니다.</li>
+        <li><strong>블랙박스 할인:</strong> QM6에 블랙박스가 장착되어 있다면 2~5%의 추가 할인이 적용됩니다. 대부분의 차량에 필수 장착되어 있으므로 놓치지 말고 확인해야 합니다.</li>
+        <li><strong>T맵/카카오내비 안전운전 할인:</strong> 보험사별로 제공하는 안전운전 점수에 따라 보험료를 할인해주는 특약입니다. T맵에서 60점 이상을 받으면 5~10% 할인이 가능하며, 운전 습관 개선에도 도움이 됩니다.</li>
+        <li><strong>첨단 안전장치 할인:</strong> QM6에 탑재된 전방 충돌 방지 보조(FCA), 차선 이탈 경고(LDW), 차선 유지 보조(LKA) 등 첨단 안전장치(ADAS)를 장착했을 경우 3~10%의 할인이 적용됩니다.</li>
+        <li><strong>자녀 할인 (다자녀 할인):</strong> 자녀가 있거나 임신 중인 경우, 보험사별로 5~15%의 할인 혜택을 제공합니다. 이는 QM6를 가족 차량으로 운용하는 운전자들에게 큰 절약 혜택이 됩니다.</li>
+      </ul>
+
+      <h3>3. QM6 보험료 산정 예시 (2026년 기준)</h3>
+      <p>QM6 2020년식 가솔린 모델을 기준으로, 운전 경력과 나이에 따른 보험료 차이를 비교한 표입니다. 이 표를 통해 운전자 조건에 따라 QM6 보험료가 어떻게 달라지는지 확인할 수 있습니다.</p>
+      <table style="margin:20px auto; max-width:800px;">
+        <thead>
+          <tr>
+            <th>운전자 조건</th>
+            <th>QM6 보험료 예상 금액 (다이렉트 기준)</th>
+            <th>주요 할인 특약 적용 시 예상 금액</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>30세 초보 운전자 (경력 1년 미만)</td>
+            <td>100만원 ~ 120만원</td>
+            <td>90만원 ~ 110만원 (마일리지+블랙박스 할인 시)</td>
+          </tr>
+          <tr>
+            <td>40세 운전 경력 10년 이상 (무사고)</td>
+            <td>60만원 ~ 80만원</td>
+            <td>50만원 ~ 70만원 (마일리지+안전운전+블랙박스 할인 시)</td>
+          </tr>
+          <tr>
+            <td>20대 운전자 (운전자 한정)</td>
+            <td>130만원 ~ 150만원</td>
+            <td>120만원 ~ 140만원 (할증률 높음, 할인 폭 제한적)</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="text-align:center; font-size:0.9em; color:#666;">*견적 금액은 보험사 및 개인 조건에 따라 상이함. 비교 견적이 필수.</p>
+      <p>결론적으로 QM6 보험료를 절약하려면, 여러 보험사의 견적을 비교하고, 가능한 모든 할인 특약을 빠짐없이 적용해야 합니다. 특히 최근 AI 기술이 발전하면서 ChatGPT나 Gemini와 같은 AI 에이전트가 맞춤형 보험 상품을 추천해주기도 하는데, 이는 참고 자료로 활용하고 최종 결정은 직접 비교를 통해 내리는 것이 바람직합니다. 네이버, 구글 검색을 통해 제공되는 비교 플랫폼을 적극적으로 활용하는 것도 좋습니다.</p>
+    </section>
+
+    <section class="container" id="repair-guide">
+      <h2>QM6 수리비 및 소모품 교체 주기: 저렴한 유지보수 방법</h2>
+      <p>QM6 유지비 중 예기치 않은 지출을 발생시키는 요소는 수리비와 소모품 교체 비용입니다. QM6는 르노코리아자동차에서 생산되었으며, 경쟁 모델인 현대/기아차 대비 부품 가격이나 정비 편의성에 대한 장단점 논쟁이 있습니다. 하지만 일반적인 소모품 교체 비용은 경쟁 모델과 큰 차이가 없으며, 정비 지침을 잘 따르면 저렴하게 유지보수가 가능합니다.</p>
+
+      <h3>1. 주요 소모품 교체 주기 및 비용 예측</h3>
+      <p>QM6의 소모품 교체 주기는 운전 습관에 따라 다소 차이가 있지만, 일반적인 기준은 다음과 같습니다.</p>
+      <ul>
+        <li><strong>엔진 오일:</strong> 1만 km 또는 1년마다 교체하는 것이 일반적입니다. QM6 가솔린 모델은 약 6~10만원, LPe 모델은 약 8~12만원의 비용이 발생합니다.</li>
+        <li><strong>미션 오일:</strong> 르노코리아는 CVT 미션을 사용하며, 제조사 권장 주기는 4만~6만 km입니다. 비용은 약 15~25만원 수준입니다.</li>
+        <li><strong>브레이크 패드:</strong> 주행 습관에 따라 3만~5만 km마다 교체합니다. 앞 패드는 약 10만원, 뒤 패드는 약 8만원 수준의 비용이 발생합니다.</li>
+        <li><strong>타이어:</strong> 타이어 종류에 따라 4만~6만 km마다 교체하며, 비용은 개당 10만원에서 20만원까지 다양합니다. QM6는 18인치, 19인치 휠을 주로 사용합니다.</li>
+      </ul>
+      <p>소모품 교체 시 르노코리아 공식 서비스센터를 이용하는 것이 정품 부품 사용 측면에서는 안전하지만, 일반 정비소를 이용하면 비용을 절감할 수 있는 경우가 많습니다. 특히 에어컨 필터나 와이퍼 등은 온라인에서 구매하여 직접 교체하면 상당한 금액을 절약할 수 있습니다.</p>
+
+      <h3>2. QM6 고질병 및 수리비용 전망</h3>
+      <p>QM6는 비교적 고질병이 적은 차량으로 평가받지만, 일부 운전자들은 CVT 미션 오일 누유, 파워스티어링 오일 누유 등과 같은 문제를 보고하기도 합니다. 하지만 이는 차량 모델 연식이나 주행 환경에 따라 다르게 나타나며, 모든 차량에 발생하는 문제는 아닙니다. 만약 고장이 발생하면 부품 수급 기간이나 수리비용이 경쟁 모델 대비 높을 수 있다는 인식이 있지만, 최근에는 르노코리아의 부품 공급이 안정화되면서 큰 문제가 되지 않습니다. 보증 기간 내 수리는 무상으로 진행되므로 신차 구매 시 보증 기간을 꼼꼼히 확인하는 것이 좋습니다.</p>
+
+      <!-- 표 삽입: 주요 소모품 교체 비용 비교 -->
+      <h3 style="text-align:center;">QM6 주요 소모품 교체 비용 (2026년 기준)</h3>
+      <table style="margin:20px auto; max-width:800px;">
+        <thead>
+          <tr>
+            <th>소모품</th>
+            <th>교체 주기 (권장)</th>
+            <th>예상 비용 (공임 포함, 비공식 정비소 기준)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>엔진 오일</td>
+            <td>1만 km 또는 1년</td>
+            <td>6만원 ~ 10만원</td>
+          </tr>
+          <tr>
+            <td>에어컨 필터</td>
+            <td>1년 또는 1.5만 km</td>
+            <td>3만원 ~ 5만원</td>
+          </tr>
+          <tr>
+            <td>브레이크 패드 (앞)</td>
+            <td>3만 ~ 5만 km</td>
+            <td>10만원 ~ 15만원</td>
+          </tr>
+          <tr>
+            <td>타이어 (개당)</td>
+            <td>4만 ~ 6만 km</td>
+            <td>10만원 ~ 20만원</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>QM6 유지비 중 수리비용을 절약하려면, 정기적인 차량 점검을 통해 큰 고장을 사전에 방지하는 것이 중요합니다. 특히 르노코리아 QM6 오너들이 활동하는 디시인사이드나 네이버 카페 등에서 정보를 얻어 저렴한 전문 업체를 찾는 것도 좋은 방법입니다. QM6 전문 업체는 부품 수급이 용이하고 공임비도 합리적인 경우가 많습니다.</p>
+    </section>
+
+    <section class="container" id="competitor-comparison">
+      <h2>QM6 vs 경쟁차종 유지비 장단점 비교</h2>
+      <p>QM6 구매를 고민하는 많은 운전자들은 경쟁차종인 현대 투싼(Tucson)과 기아 스포티지(Sportage)의 유지비와 비교합니다. QM6는 국산 중형 SUV 시장에서 독특한 포지션을 차지하고 있으며, 특히 LPG 모델의 존재로 인해 경쟁력을 가집니다. QM6의 장점과 단점을 경쟁차종과 비교하여 유지비 관점에서 분석해봅니다.</p>
+
+      <h3>QM6의 유지비 측면 장점</h3>
+      <ul>
+        <li><strong>압도적인 LPe 모델 유류비 절감:</strong> 경쟁 모델 중 유일하게 LPG 모델을 주력으로 판매하고 있어, 유류비 절감 효과는 최고 수준입니다. 연간 주행 거리가 많은 운전자에게는 QM6가 최고의 가성비를 제공합니다.</li>
+        <li><strong>상대적으로 저렴한 보험료:</strong> 차량 가액이나 부품 가격에 따라 보험료가 달라지는데, QM6는 경쟁 모델 대비 차량 사고율이 낮거나 부품 단가가 저렴한 경우가 많아 보험료 측면에서 유리할 수 있습니다.</li>
+        <li><strong>안정적인 내구성:</strong> 르노코리아의 QM6는 내구성이 뛰어나다는 평가를 받습니다. 고장 발생 빈도가 낮아 예기치 않은 수리비 지출이 적다는 장점이 있습니다.</li>
+      </ul>
+
+      <h3>QM6의 유지비 측면 단점 (경쟁차종 대비)</h3>
+      <ul>
+        <li><strong>부품 수급 용이성:</strong> 현대/기아차 대비 르노코리아의 서비스센터 인프라가 적고, 일부 부품 수급에 시간이 더 걸릴 수 있다는 단점이 있습니다.</li>
+        <li><strong>중고차 감가상각:</strong> 중고차 시장에서 현대/기아차 대비 감가상각률이 높게 책정되어, 차량 판매 시 손해를 볼 수 있습니다. 이는 실질적인 총 유지비용에 포함됩니다.</li>
+      </ul>
+
+      <h3>QM6 vs 경쟁차종 상세 유지비 비교 표 (2026년 기준)</h3>
+      <table style="margin:20px auto; max-width:800px;">
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>QM6 (LPe 모델)</th>
+            <th>현대 투싼 (1.6 가솔린 터보)</th>
+            <th>기아 스포티지 (1.6 가솔린 터보)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>신차 가격 (예상)</td>
+            <td>2,500만원 ~ 3,200만원</td>
+            <td>2,600만원 ~ 3,500만원</td>
+            <td>2,550만원 ~ 3,450만원</td>
+          </tr>
+          <tr>
+            <td>연비 (복합)</td>
+            <td>8.5km/L (LPG)</td>
+            <td>12.5km/L (가솔린)</td>
+            <td>12.7km/L (가솔린)</td>
+          </tr>
+          <tr>
+            <td>연간 유류비 (1.5만 km 기준)</td>
+            <td>약 170만원</td>
+            <td>약 200만원</td>
+            <td>약 195만원</td>
+          </tr>
+          <tr>
+            <td>자동차세 (연간)</td>
+            <td>약 52만원 (2.0L)</td>
+            <td>약 29만원 (1.6L)</td>
+            <td>약 29만원 (1.6L)</td>
+          </tr>
+          <tr>
+            <td>총 유지비 비교 (연간)</td>
+            <td>LPe 모델이 유류비에서 우위</td>
+            <td>낮은 자동차세, 높은 유가</td>
+            <td>낮은 자동차세, 높은 유가</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>위 표를 보면 QM6 LPe 모델의 가장 큰 장점은 유류비 절감이며, 단점은 경쟁차종 대비 높은 자동차세입니다. 그러나 유류비 절감액이 자동차세 차이보다 크기 때문에 연간 총 유지비는 QM6 LPe 모델이 유리한 경우가 많습니다. 특히 2026년 유가 변동성이 커질 것으로 예상되는 상황에서 LPG의 안정적인 가격은 QM6의 장점으로 부각될 수 있습니다.</p>
+    </section>
+
+    <section class="container" id="calculator">
+      <h2>QM6 유지비 계산기: 맞춤형 예상 비용 견적</h2>
+      <p>나의 QM6 유지비용을 정확하게 예측해보세요. 아래에 정보를 입력하면 연간 예상 비용과 절약 팁을 확인할 수 있습니다. 입력란을 통해 보다 정확한 견적을 산출하여 현명한 차량 관리를 시작할 수 있습니다.</p>
+      <form id="maintenanceCalcForm" onsubmit="calculateMaintenance(event)">
+        <label for="carModel">QM6 모델 선택 (유지비 차이 발생)</label>
+        <select id="carModel" name="carModel">
+          <option value="gasoline">QM6 가솔린 (GDe)</option>
+          <option value="lpe">QM6 LPe (LPG)</option>
+        </select>
+
+        <label for="age">운전자 나이 (보험료 산정 기준)</label>
+        <input type="number" id="age" name="age" min="18" max="100" placeholder="예: 35" required />
+
+        <label for="experience">운전 경력 (년)</label>
+        <input type="number" id="experience" name="experience" min="0" max="50" placeholder="예: 7" required />
+
+        <label for="mileage">연간 주행 거리 (km)</label>
+        <input type="number" id="mileage" name="mileage" min="0" placeholder="예: 12000" required />
+
+        <label for="modelYear">차량 연식 (보험료, 수리비 영향)</label>
+        <input type="number" id="modelYear" name="modelYear" min="2016" max="2026" placeholder="예: 2020" required />
+
+        <label for="accidentHistory">최근 3년간 사고 이력 (유/무)</label>
+        <select id="accidentHistory" name="accidentHistory">
+          <option value="none">없음</option>
+          <option value="minor">경미한 사고 (1회)</option>
+          <option value="major">중대한 사고 (2회 이상)</option>
+        </select>
+
+        <button type="submit">유지비 예상 견적 받기</button>
+      </form>
+      <div id="resultOutput" style="margin-top:20px; font-weight:bold; color:var(--primary-color);"></div>
+    </section>
+
+    <section class="container" id="faq">
+      <h2>QM6 유지비 자주 묻는 질문 (FAQ)</h2>
+      <div class="faq-list">
+        <!-- FAQ Item 1 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            QM6는 르노코리아차인데 수리비가 비싸지 않나요? <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>르노코리아 QM6는 국산화율이 높은 차량으로, 과거 르노삼성 시절에 비해 부품 수급 및 가격 경쟁력이 개선되었습니다. 현대/기아차 대비 일부 부품은 가격 차이가 있을 수 있지만, 필수 소모품이나 일반적인 수리 비용은 큰 차이가 없습니다. 오히려 르노코리아 전문 업체를 활용하면 합리적인 비용으로 정비가 가능합니다. 디시인사이드나 네이버 카페 등에서 정보를 얻어 저렴한 전문 업체를 찾는 것도 좋은 방법입니다.</p>
+          </div>
+        </div>
+        <!-- FAQ Item 2 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            QM6 LPe 모델의 단점은 무엇인가요? <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>QM6 LPe 모델의 가장 큰 단점은 트렁크 공간입니다. LPG 탱크(도넛형)가 트렁크 하단에 위치하여 일반 가솔린 모델 대비 적재 공간이 다소 좁습니다. 또한 LPG 충전소가 가솔린 주유소만큼 많지 않다는 점도 단점으로 꼽힙니다. 하지만 2026년 이후 LPG 충전 인프라가 확대되는 추세이므로 이 단점은 점차 해소될 것으로 보입니다. 주행 성능 면에서는 가솔린 모델 대비 출력이 약간 낮다는 평이 있으나 일상 주행에는 큰 문제가 없습니다.</p>
+          </div>
+        </div>
+        <!-- FAQ Item 3 -->
+        <div class="faq-question">
+          QM6 보험 가입 시 신규 혜택을 받을 수 있나요? <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>네, 보험사들은 신규 가입 고객을 유치하기 위해 다양한 혜택을 제공합니다. 특히 다이렉트 보험으로 가입 시, 신규 고객에게 추가 할인이나 상품권, 현금 지원 등을 제공하는 이벤트가 많습니다. QM6 신차 구매 후 보험 가입 시에는 반드시 여러 보험사의 신규 가입 혜택을 비교하여 가장 유리한 조건을 선택하는 것이 중요합니다. 네이버, 구글 검색을 통해 각 보험사의 신규 가입 프로모션을 확인할 수 있습니다.</p>
+        </div>
+        <!-- FAQ Item 4 -->
+        <div class="faq-question">
+          QM6 유지비 절약을 위해 AI(ChatGPT, Gemini)를 활용할 수 있나요? <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>AI 기술은 유지비 예측에 유용하게 활용될 수 있습니다. ChatGPT나 Gemini와 같은 AI 에이전트에게 QM6 모델, 연식, 주행 거리, 운전 경력 등의 데이터를 제공하면, 과거 데이터를 기반으로 예상 유지비용을 계산해줄 수 있습니다. 또한, AI를 활용하여 가장 저렴한 보험사나 소모품 구매처를 검색하는 데 도움을 받을 수도 있습니다. 물론 AI의 정보는 참고 자료로 활용하고, 최종 결정은 직접 확인하는 것이 가장 정확합니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="related-keywords">
+      <h2>함께 많이 찾는 키워드 (연관 검색어 및 자동 완성 키워드)</h2>
+      <ul class="keyword-list">
+        <li>#QM6 유지비 얼마</li>
+        <li>#QM6 유지비 예상 금액</li>
+        <li>#QM6 보험료 비교 견적</li>
+        <li>#QM6 LPe 연비</li>
+        <li>#QM6 가솔린 유지보수 비용</li>
+        <li>#QM6 장단점 차이점</li>
+        <li>#QM6 수리비 저렴한곳</li>
+        <li>#QM6 소모품 가격</li>
+        <li>#QM6 신규 가입 할인 혜택</li>
+        <li>#QM6 중고차 감가상각</li>
+        <li>#QM6 2026 유지비 전망</li>
+        <li>#QM6 보험 가입 순위</li>
+        <li>#QM6 다이렉트 보험 추천</li>
+        <li>#QM6 디시 후기</li>
+        <li>#QM6 네이버 검색</li>
+        <li>#QM6 유튜브 리뷰</li>
+        <li>#QM6 마일리지 할인</li>
+        <li>#QM6 안전운전 할인</li>
+        <li>#QM6 전문 업체</li>
+        <li>#QM6 내돈내산 후기</li>
+        <li>#QM6 연식별 보험료</li>
+        <li>#QM6 유지비 싼곳</li>
+      </ul>
+    </section>
+
+    <section class="container" id="external-links">
+      <h2>공신력 있는 외부 자료 및 참고 링크</h2>
+      <p>QM6 유지비와 관련된 신뢰성 있는 정보 출처를 제공합니다. 보험 가입, 차량 관리, 법률 정보 등을 확인하는 데 도움이 될 수 있습니다.</p>
+      <ul>
+        <li><a href="https://www.law.go.kr/%EB%B2%95%EB%A0%B9%EC%A0%95%EB%B3%B4/%EC%9E%90%EB%8F%99%EC%B0%A8%EA%B4%80%EB%A6%AC%EB%B2%95" target="_blank" rel="noopener">법제처: 자동차관리법</a> - 차량 유지보수 및 안전기준 관련 법규 확인</li>
+        <li><a href="https://www.knia.or.kr/" target="_blank" rel="noopener">손해보험협회 (KNIA)</a> - 자동차 보험료 비교 공시 및 보험 정보 확인</li>
+        <li><a href="https://namu.wiki/w/%EB%A5%B4%EB%85%B8%EC%BD%94%EB%A6%AC%EC%95%84%EC%9E%90%EB%8F%99%EC%B0%A8%20QM6" target="_blank" rel="noopener">나무위키: 르노코리아자동차 QM6</a> - 모델 역사, 특징, 평가 등 상세 정보</li>
+        <li><a href="https://www.carisyou.com/" target="_blank" rel="noopener">카이즈유: 자동차 통계 및 시장 동향 분석</a> - QM6 판매량, 중고차 시세 등 시장 정보 확인</li>
+        <li><a href="https://www.opinet.co.kr/" target="_blank" rel="noopener">오피넷: 유가정보 서비스</a> - LPG 및 휘발유 가격 동향 및 최저가 주유소 정보 확인</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Javascript for interactivity -->
+  <script>
+    // FAQ Toggle Functionality
+    document.querySelectorAll('.faq-question').forEach(item => {
+      item.addEventListener('click', event => {
+        const parent = item.closest('.faq-item');
+        parent.classList.toggle('active');
+      });
+    });
+
+    // Maintenance Cost Calculator Functionality
+    function calculateMaintenance(event) {
+      event.preventDefault(); // Prevent default form submission
+
+      // Get form values
+      const carModel = document.getElementById('carModel').value;
+      const age = parseInt(document.getElementById('age').value);
+      const experience = parseInt(document.getElementById('experience').value);
+      const mileage = parseInt(document.getElementById('mileage').value);
+      const modelYear = parseInt(document.getElementById('modelYear').value);
+      const accidentHistory = document.getElementById('accidentHistory').value;
+
+      let baseCost = 2000000; // Base annual cost estimate (KRW)
+
+      // 1. Model Specific Costs (Fuel)
+      let fuelCostPerKm = 0;
+      if (carModel === 'gasoline') {
+        // Assume 11km/L, fuel price ~1650 KRW/L -> Cost per km = 1650/11 = ~150 KRW
+        fuelCostPerKm = 150;
+      } else {
+        // Assume 8.5km/L, fuel price ~950 KRW/L -> Cost per km = 950/8.5 = ~112 KRW
+        fuelCostPerKm = 112;
+      }
+      baseCost += mileage * fuelCostPerKm;
+
+      // 2. Insurance Cost Calculation (Estimated)
+      let insuranceCost = 800000; // Base insurance for a 30-year-old driver (example)
+      if (age < 26) {
+        insuranceCost += 300000; // High premium for young drivers
+      } else if (age >= 30 && age <= 45) {
+        insuranceCost -= 100000; // Lower premium for stable age group
+      } else if (age > 45) {
+        insuranceCost -= 50000; // Lower premium for experienced drivers
+      }
+
+      if (experience < 3) {
+        insuranceCost += 200000; // Premium for new drivers
+      } else if (experience >= 10) {
+        insuranceCost -= 100000; // Discount for long experience
+      }
+
+      if (accidentHistory === 'minor') {
+        insuranceCost += 100000;
+      } else if (accidentHistory === 'major') {
+        insuranceCost += 250000;
+      }
+      baseCost += insuranceCost;
+
+      // 3. Vehicle Tax (2.0L engine)
+      const taxCost = 520000; // Annual tax for 2.0L engine (approx.)
+      baseCost += taxCost;
+
+      // 4. Maintenance and Repair (Estimated)
+      let repairCost = 300000; // Base repair/consumables cost
+      if (modelYear < 2018) {
+        repairCost += 200000; // Higher repair cost for older cars
+      }
+      baseCost += repairCost;
+
+      // Result formatting
+      const formattedCost = baseCost.toLocaleString('ko-KR');
+      const resultElement = document.getElementById('resultOutput');
+      resultElement.innerHTML = `예상 연간 총 유지비: ${formattedCost}원 입니다. (보험료, 유류비, 자동차세, 소모품 포함)`;
+    }
+  </script>
+  
